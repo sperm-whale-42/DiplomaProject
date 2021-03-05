@@ -1,12 +1,12 @@
 %%
-% ¶ÔÐÅºÅ½øÐÐ´ÖÁ£»¯
-% ÊäÈë£º¢Ùx,Ê±ÐòÐÅºÅ
-%       ¢Úscale£¬´ÖÁ£»¯³ß¶È
-% Êä³ö£º¢Ùy£¬´ÖÁ£»¯µÄÊä³ö
+% å¯¹ä¿¡å·è¿›è¡Œç²—ç²’åŒ–
+% è¾“å…¥ï¼šâ‘ x,æ—¶åºä¿¡å·
+%       â‘¡scaleï¼Œç²—ç²’åŒ–å°ºåº¦
+% è¾“å‡ºï¼šâ‘ yï¼Œç²—ç²’åŒ–çš„è¾“å‡º
 % y(i)=mean{x(i),x(i+1),x(i+2),?,x(i+scale?1)}
 
-%×÷Õß£ºÐíÖ¾Ïè£¨Î÷°²½»Í¨´óÑ§ ³µÁ¾71£©
-%ÁªÏµ·½Ê½£ºmr_xuzhixiang@qq.com
+%ä½œè€…ï¼šè®¸å¿—ç¿”ï¼ˆè¥¿å®‰äº¤é€šå¤§å­¦ è½¦è¾†71ï¼‰
+%è”ç³»æ–¹å¼ï¼šmr_xuzhixiang@qq.com
 %%
 function [y] = CoarseGraining(x,scale)
         if scale == 1
@@ -17,7 +17,7 @@ function [y] = CoarseGraining(x,scale)
             for i = 1:N
                 y(i,:) = mean(Y(:,i));
             end
-            y(i+1,:) = y(i,:); % Ä©Î»²¹È«£¬±£³ÖÐÅºÅ³¤¶È²»±ä
+            y(i+1,:) = y(i,:); % æœ«ä½è¡¥å…¨ï¼Œä¿æŒä¿¡å·é•¿åº¦ä¸å˜
 %             k = 0;
 %             N = floor(length(x)/scale);
 %             for i = 1:N
